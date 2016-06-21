@@ -102,7 +102,17 @@
 single request should not upload more than 150 MB of file contents.</dd><dt><a href="Alorel/Dropbox/Options/Mixins/AutoRenameTrait.html"><abbr title="Alorel\Dropbox\Options\Mixins\AutoRenameTrait">AutoRenameTrait</abbr></a> &mdash; <em>Class in namespace <a href="Alorel/Dropbox/Options/Mixins.html">Alorel\Dropbox\Options\Mixins</a></em></dt>
                     <dd>If there's a conflict, as determined by mode, have the Dropbox server try to autorename the file to avoid
 conflict. The default for this field is False.</dd><dt><a href="Alorel/Dropbox/Parameters/AbstractParameter.html"><abbr title="Alorel\Dropbox\Parameters\AbstractParameter">AbstractParameter</abbr></a> &mdash; <em>Class in namespace <a href="Alorel/Dropbox/Parameters.html">Alorel\Dropbox\Parameters</a></em></dt>
-                    <dd>Topmost abstract parameter class</dd><dt><a href="Alorel/Dropbox/Parameters/ThumbnailFormat.html#method_availableFormats"><abbr title="Alorel\Dropbox\Parameters\ThumbnailFormat">ThumbnailFormat</abbr>::availableFormats</a>() &mdash; <em>Method in class <a href="Alorel/Dropbox/Parameters/ThumbnailFormat.html"><abbr title="Alorel\Dropbox\Parameters\ThumbnailFormat">ThumbnailFormat</abbr></a></em></dt>
+            <dd>Topmost abstract parameter class</dd>
+            <dt><a href="Alorel/Dropbox/Parameters/Collections/MemberSelectors.html#method_add"><abbr
+                    title="Alorel\Dropbox\Parameters\Collections\MemberSelectors">MemberSelectors</abbr>::add</a>() &mdash;
+                <em>Method in class <a href="Alorel/Dropbox/Parameters/Collections/MemberSelectors.html"><abbr
+                        title="Alorel\Dropbox\Parameters\Collections\MemberSelectors">MemberSelectors</abbr></a></em>
+            </dt>
+            <dd>Add one or more {@link MemberSelector}s to the collection</dd>
+            <dt><a href="Alorel/Dropbox/Parameters/ThumbnailFormat.html#method_availableFormats"><abbr
+                    title="Alorel\Dropbox\Parameters\ThumbnailFormat">ThumbnailFormat</abbr>::availableFormats</a>() &mdash;
+                <em>Method in class <a href="Alorel/Dropbox/Parameters/ThumbnailFormat.html"><abbr
+                        title="Alorel\Dropbox\Parameters\ThumbnailFormat">ThumbnailFormat</abbr></a></em></dt>
                     <dd>Return the available formats</dd><dt><a href="Alorel/Dropbox/Parameters/ThumbnailSize.html#method_availableSizes"><abbr title="Alorel\Dropbox\Parameters\ThumbnailSize">ThumbnailSize</abbr>::availableSizes</a>() &mdash; <em>Method in class <a href="Alorel/Dropbox/Parameters/ThumbnailSize.html"><abbr title="Alorel\Dropbox\Parameters\ThumbnailSize">ThumbnailSize</abbr></a></em></dt>
                     <dd>Return a list ov available thumbnail sizes</dd><dt><a href="Alorel/Dropbox/Parameters/WriteMode.html#method_add"><abbr title="Alorel\Dropbox\Parameters\WriteMode">WriteMode</abbr>::add</a>() &mdash; <em>Method in class <a href="Alorel/Dropbox/Parameters/WriteMode.html"><abbr title="Alorel\Dropbox\Parameters\WriteMode">WriteMode</abbr></a></em></dt>
                     <dd>Never overwrite the existing file. The autorename strategy is to append a number to the file name. For
@@ -122,8 +132,28 @@ default for this field is False.</dd><dt><a href="Alorel/Dropbox/Parameters/Comm
         <dl id="index"><dt><a href="Alorel/Dropbox/Exception/DropboxException.html"><abbr title="Alorel\Dropbox\Exception\DropboxException">DropboxException</abbr></a> &mdash; <em>Class in namespace <a href="Alorel/Dropbox/Exception.html">Alorel\Dropbox\Exception</a></em></dt>
                     <dd>Exception wrapper</dd><dt><a href="Alorel/Dropbox/Operation/Files/Delete.html"><abbr title="Alorel\Dropbox\Operation\Files\Delete">Delete</abbr></a> &mdash; <em>Class in namespace <a href="Alorel/Dropbox/Operation/Files.html">Alorel\Dropbox\Operation\Files</a></em></dt>
                     <dd>The delete operation</dd><dt><a href="Alorel/Dropbox/Operation/Files/Download.html"><abbr title="Alorel\Dropbox\Operation\Files\Download">Download</abbr></a> &mdash; <em>Class in namespace <a href="Alorel/Dropbox/Operation/Files.html">Alorel\Dropbox\Operation\Files</a></em></dt>
-                    <dd>Download a file</dd><dt><a href="Alorel/Dropbox/Parameters/SearchMode.html#method_deletedFilename"><abbr title="Alorel\Dropbox\Parameters\SearchMode">SearchMode</abbr>::deletedFilename</a>() &mdash; <em>Method in class <a href="Alorel/Dropbox/Parameters/SearchMode.html"><abbr title="Alorel\Dropbox\Parameters\SearchMode">SearchMode</abbr></a></em></dt>
-                    <dd>Search for deleted file and folder names.</dd>        </dl><h2 id="letterF">F</h2>
+            <dd>Download a file</dd>
+            <dt><a href="Alorel/Dropbox/Parameters/MemberSelector.html#method_dropboxID"><abbr
+                    title="Alorel\Dropbox\Parameters\MemberSelector">MemberSelector</abbr>::dropboxID</a>() &mdash; <em>Method
+                in class <a href="Alorel/Dropbox/Parameters/MemberSelector.html"><abbr
+                        title="Alorel\Dropbox\Parameters\MemberSelector">MemberSelector</abbr></a></em></dt>
+            <dd>Constructs a member selector from a Dropbox ID</dd>
+            <dt><a href="Alorel/Dropbox/Parameters/SearchMode.html#method_deletedFilename"><abbr
+                    title="Alorel\Dropbox\Parameters\SearchMode">SearchMode</abbr>::deletedFilename</a>() &mdash; <em>Method
+                in class <a href="Alorel/Dropbox/Parameters/SearchMode.html"><abbr
+                        title="Alorel\Dropbox\Parameters\SearchMode">SearchMode</abbr></a></em></dt>
+            <dd>Search for deleted file and folder names.</dd>
+        </dl>
+                            <h2 id="letterE">E</h2>
+                            <dl id="index">
+                                <dt><a href="Alorel/Dropbox/Parameters/MemberSelector.html#method_email"><abbr
+                                        title="Alorel\Dropbox\Parameters\MemberSelector">MemberSelector</abbr>::email</a>() &mdash;
+                                    <em>Method in class <a href="Alorel/Dropbox/Parameters/MemberSelector.html"><abbr
+                                            title="Alorel\Dropbox\Parameters\MemberSelector">MemberSelector</abbr></a></em>
+                                </dt>
+                                <dd>Constructs a member selector from their email</dd>
+                            </dl>
+                            <h2 id="letterF">F</h2>
         <dl id="index"><dt><a href="Alorel/Dropbox/Operation/Files/UploadSession/Finish.html"><abbr title="Alorel\Dropbox\Operation\Files\UploadSession\Finish">Finish</abbr></a> &mdash; <em>Class in namespace <a href="Alorel/Dropbox/Operation/Files/UploadSession.html">Alorel\Dropbox\Operation\Files\UploadSession</a></em></dt>
                     <dd>Finish an upload session and save the uploaded data to the given file path. A single request should not upload
 more than 150 MB of file contents.</dd><dt><a href="Alorel/Dropbox/Parameters/SearchMode.html#method_filename"><abbr title="Alorel\Dropbox\Parameters\SearchMode">SearchMode</abbr>::filename</a>() &mdash; <em>Method in class <a href="Alorel/Dropbox/Parameters/SearchMode.html"><abbr title="Alorel\Dropbox\Parameters\SearchMode">SearchMode</abbr></a></em></dt>
@@ -190,7 +220,21 @@ changes available or a timeout occurs. This endpoint is useful mostly for client
                     <dd>Normally, users are made aware of any file modifications in their Dropbox account via notifications in the
 client software. If true, this tells the clients that this modification shouldn't result in a user
 notification. The default for this field is False.</dd><dt><a href="Alorel/Dropbox/Options/Options.html#method_merge"><abbr title="Alorel\Dropbox\Options\Options">Options</abbr>::merge</a>() &mdash; <em>Method in class <a href="Alorel/Dropbox/Options/Options.html"><abbr title="Alorel\Dropbox\Options\Options">Options</abbr></a></em></dt>
-                    <dd>Create an Options object from a combination of configuration arrays and other option objects</dd>        </dl><h2 id="letterN">N</h2>
+            <dd>Create an Options object from a combination of configuration arrays and other option objects</dd>
+            <dt><a href="Alorel/Dropbox/Parameters/Collections/MemberSelectors.html"><abbr
+                    title="Alorel\Dropbox\Parameters\Collections\MemberSelectors">MemberSelectors</abbr></a> &mdash;
+                <em>Class in namespace <a href="Alorel/Dropbox/Parameters/Collections.html">Alorel\Dropbox\Parameters\Collections</a></em>
+            </dt>
+            <dd>Collection of {@link MemberSelector}s</dd>
+            <dt><a href="Alorel/Dropbox/Parameters/MemberSelector.html"><abbr
+                    title="Alorel\Dropbox\Parameters\MemberSelector">MemberSelector</abbr></a> &mdash; <em>Class in
+                namespace <a href="Alorel/Dropbox/Parameters.html">Alorel\Dropbox\Parameters</a></em></dt>
+            <dd>Includes different ways to identify a member of a shared item. The value will be one of the following
+                datatypes. New
+                values may be introduced as the Dropbox API evolves.
+            </dd>
+        </dl>
+                            <h2 id="letterN">N</h2>
         <dl id="index"><dt><a href="Alorel/Dropbox/Exception/NoTokenException.html"><abbr title="Alorel\Dropbox\Exception\NoTokenException">NoTokenException</abbr></a> &mdash; <em>Class in namespace <a href="Alorel/Dropbox/Exception.html">Alorel\Dropbox\Exception</a></em></dt>
                     <dd>Exception for when the API key is not provided</dd>        </dl><h2 id="letterO">O</h2>
         <dl id="index"><dt><a href="Alorel/Dropbox/Options/Option.html"><abbr title="Alorel\Dropbox\Options\Option">Option</abbr></a> &mdash; <em>Class in namespace <a href="Alorel/Dropbox/Options.html">Alorel\Dropbox\Options</a></em></dt>
@@ -310,7 +354,13 @@ network infrastructure does not support long timeouts. The default for this fiel
                     <dd>The format for the thumbnail image, jpeg (default) or png. For images that are photos, jpeg should be
 preferred, while png is better for screenshots and digital arts. The default for this union is jpeg.</dd><dt><a href="Alorel/Dropbox/Parameters/ThumbnailSize.html"><abbr title="Alorel\Dropbox\Parameters\ThumbnailSize">ThumbnailSize</abbr></a> &mdash; <em>Class in namespace <a href="Alorel/Dropbox/Parameters.html">Alorel\Dropbox\Parameters</a></em></dt>
                     <dd>The size for the thumbnail image. The default for this union is 64x64.</dd><dt><a href="Alorel/Dropbox/Util.html#method_trimNulls"><abbr title="Alorel\Dropbox\Util">Util</abbr>::trimNulls</a>() &mdash; <em>Method in class <a href="Alorel/Dropbox/Util.html"><abbr title="Alorel\Dropbox\Util">Util</abbr></a></em></dt>
-                    <dd>Trims nulls from the input</dd>        </dl><h2 id="letterU">U</h2>
+            <dd>Trims nulls from the input</dd>
+            <dt><a href="Alorel/Dropbox/Util.html#method_typeof"><abbr
+                    title="Alorel\Dropbox\Util">Util</abbr>::typeof</a>() &mdash; <em>Method in class <a
+                    href="Alorel/Dropbox/Util.html"><abbr title="Alorel\Dropbox\Util">Util</abbr></a></em></dt>
+            <dd>Returns the type of the given item</dd>
+        </dl>
+                            <h2 id="letterU">U</h2>
         <dl id="index"><dt><a href="Alorel/Dropbox/Operation/Files/Upload.html"><abbr title="Alorel\Dropbox\Operation\Files\Upload">Upload</abbr></a> &mdash; <em>Class in namespace <a href="Alorel/Dropbox/Operation/Files.html">Alorel\Dropbox\Operation\Files</a></em></dt>
                     <dd>Create a new file with the contents provided in the request. Do not use this to upload a file larger than
 150 MB. Instead, create an upload session with upload_session/start.</dd><dt><a href="Alorel/Dropbox/Options/Builder/UploadOptions.html"><abbr title="Alorel\Dropbox\Options\Builder\UploadOptions">UploadOptions</abbr></a> &mdash; <em>Class in namespace <a href="Alorel/Dropbox/Options/Builder.html">Alorel\Dropbox\Options\Builder</a></em></dt>

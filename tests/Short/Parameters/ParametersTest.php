@@ -1,13 +1,14 @@
 <?php
     /**
- * Copyright (c) 2016 Alorel, https://github.com/Alorel
- * Licenced under MIT: https://github.com/Alorel/dropbox-v2-php/blob/master/LICENSE
- */
+     * Copyright (c) 2016 Alorel, https://github.com/Alorel
+     * Licenced under MIT: https://github.com/Alorel/dropbox-v2-php/blob/master/LICENSE
+     */
 
     namespace Alorel\Dropbox\Parameters;
 
     use Alorel\Dropbox\Options\Option;
     use Alorel\Dropbox\Options\Options;
+    use Alorel\Dropbox\Test\_AbstractParameter;
     use Alorel\Dropbox\Test\DBTestCase;
     use Alorel\Dropbox\Test\TestUtil;
 
@@ -29,6 +30,27 @@
             $this->assertEquals($expect, $j);
             $this->assertEquals($json, json_encode($j));
             $this->assertEquals($json, (string)$c);
+        }
+
+        function testAddArgNonNull() {
+            $abs = new _AbstractParameter();
+
+            for ($i = 0; $i < 5; $i++) {
+                $addVal = uniqid(__METHOD__);
+                $this->assertEquals($i, count($abs->jsonSerialize()));
+                $abs->addArgBridge($addVal);
+                $this->assertEquals($i + 1, count($abs->jsonSerialize()));
+                $this->assertEquals($addVal, $abs->jsonSerialize()[$i]);
+            }
+        }
+
+        function testAddArgNull() {
+            $abs = new _AbstractParameter();
+            $this->assertEquals(0, count($abs->jsonSerialize()));
+            $this->assertInstanceOf(_AbstractParameter::class, $abs->addArgBridge(__METHOD__));
+            $this->assertEquals(1, count($abs->jsonSerialize()));
+            $abs->addArgBridge(null);
+            $this->assertEquals(1, count($abs->jsonSerialize()));
         }
 
         /** @dataProvider thumbnailFormat */

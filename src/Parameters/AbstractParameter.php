@@ -35,6 +35,23 @@
         }
 
         /**
+         * Add an unnamed argument
+         *
+         * @author Art <a.molcanovas@gmail.com>
+         *
+         * @param mixed $value Argument value
+         *
+         * @return self
+         */
+        protected function addArg($value) {
+            if ($value !== null) {
+                $this->args[] = $value;
+            }
+
+            return $this;
+        }
+
+        /**
          * Sets an argument value
          *
          * @author Art <a.molcanovas@gmail.com>

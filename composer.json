@@ -39,7 +39,8 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-dev-retriable-tests": "0.3-dev"
+      "dev-dev-retriable-tests": "0.3-dev",
+      "dev-dev-sharing": "0.4-dev"
     }
   }
 }

@@ -62,7 +62,7 @@
 
                         <div class="namespace-breadcrumbs">
             <ol class="breadcrumb">
-                <li><span class="label label-default">class</span></li>
+                <li><span class="label label-default">interface</span></li>
                                                             <li><a href="../../../Alorel.html">Alorel</a></li>
                                         <li><a href="../../../Alorel/Dropbox.html">Dropbox</a></li>
                                         <li><a href="../../../Alorel/Dropbox/Exception.html">Exception</a></li>
@@ -76,8 +76,8 @@
         <h1>DropboxException</h1>
     </div>
 
-    <p>    class
-    <strong>DropboxException</strong>        extends <a target="_blank" href="http://php.net/Exception">Exception</a>
+                    <p> interface
+                        <strong>DropboxException</strong>
 </p>
 
             <div class="description">
@@ -91,6 +91,14 @@
                 <td>NO_TOKEN</td>
                 <td class="last">
                     <p><em>Code for when the API key is not provided</em></p>
+                    <p></p>
+                </td>
+                    </tr>
+                <tr>
+                    <td>MUST_BE_MEMBER_SELECTOR</td>
+                    <td class="last">
+                        <p><em>Code when a {@link \Alorel\Dropbox\Parameters\MemberSelector MemberSelector} is expected,
+                            but a different type is received</em></p>
                     <p></p>
                 </td>
             </tr>

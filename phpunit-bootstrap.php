@@ -26,6 +26,7 @@
     use Alorel\Dropbox\Options\Mixins\TimeoutTrait;
     use Alorel\Dropbox\Options\Mixins\WriteModeTrait;
     use Alorel\Dropbox\Options\Options;
+    use Alorel\Dropbox\Parameters\AbstractParameter;
     use GuzzleHttp\Exception\ClientException;
 
     if (!getenv('APIKEY')) {
@@ -288,5 +289,16 @@
             public final function _beforeAnnounceTest() {
                 fwrite(STDOUT, PHP_EOL . 'Running ' . $this->getClass . '::' . $this->getName(true));
             }
+        }
+    }
+
+    class _AbstractParameter extends AbstractParameter {
+
+        function __construct(array $args = []) {
+            parent::__construct($args);
+        }
+
+        function addArgBridge($value) {
+            return $this->addArg($value);
         }
     }

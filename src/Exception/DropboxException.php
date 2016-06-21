@@ -11,7 +11,7 @@
      *
      * @author Art <a.molcanovas@gmail.com>
      */
-    abstract class DropboxException extends \Exception {
+    interface DropboxException {
 
         /**
          * Code for when the API key is not provided
@@ -19,4 +19,11 @@
          * @var int
          */
         const NO_TOKEN = 1;
+
+        /**
+         * Code when a {@link \Alorel\Dropbox\Parameters\MemberSelector MemberSelector} is expected, but a different type is received
+         *
+         * @var int
+         */
+        const MUST_BE_MEMBER_SELECTOR = 2;
     }

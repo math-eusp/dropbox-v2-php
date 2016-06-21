@@ -11,7 +11,7 @@
      *
      * @author Art <a.molcanovas@gmail.com>
      */
-    class NoTokenException extends DropboxException {
+    class NoTokenException extends \BadMethodCallException implements DropboxException {
 
         /**
          * NoTokenException constructor.
