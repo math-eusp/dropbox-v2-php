@@ -45,7 +45,7 @@
             $t = gettype($item);
 
             if ($t === 'object') {
-                $t = get_class($t);
+                $t = get_class($item);
             }
 
             return $t;
