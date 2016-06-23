@@ -7,8 +7,8 @@ cache:
 
 env:
  matrix:
-  - SUITE=FILE_OPS
-  - SUITE=SHORT
+  - SUITE=BLOCKING
+  - SUITE=NON_BLOCKING
 
 php:
  - 7.0

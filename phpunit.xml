@@ -19,11 +19,11 @@
 >
 
     <testsuites>
-        <testsuite name="SHORT">
-            <directory>./tests/Short</directory>
+        <testsuite name="BLOCKING">
+            <directory>./tests/Blocking</directory>
         </testsuite>
-        <testsuite name="FILE_OPS">
-            <directory>./tests/Operations/Files</directory>
+        <testsuite name="NON_BLOCKING">
+            <directory>./tests/NonBlocking</directory>
         </testsuite>
     </testsuites>
 

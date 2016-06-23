@@ -4,7 +4,7 @@
      * Licenced under MIT: https://github.com/Alorel/dropbox-v2-php/blob/master/LICENSE
      */
 
-    namespace Alorel\Dropbox\Operations\Files;
+    namespace Alorel\Dropbox\Blocking\Operations\Files;
 
     use Alorel\Dropbox\Operation\Files\CreateFolder;
     use Alorel\Dropbox\Operation\Files\ListFolder\ListFolder;
