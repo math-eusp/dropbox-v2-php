@@ -85,10 +85,6 @@
                 throw new NoTokenException();
             }
 
-            if (!self::$client) {
-                self::$client = new Client();
-            }
-
             $this->setAsync((bool)(Alo::ifnull($async, self::$defaultAsync, true)));
         }
 
@@ -190,3 +186,8 @@
             );
         }
     }
+
+    //Instantiate ::$client
+    $prop = new \ReflectionProperty(AbstractOperation::class, 'client');
+    $prop->setAccessible(true);
+    $prop->setValue(null, new Client());
