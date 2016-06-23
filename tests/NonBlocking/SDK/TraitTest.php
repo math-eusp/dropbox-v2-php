@@ -9,6 +9,7 @@
     use AloFramework\Common\Alo;
     use Alorel\Dropbox\Options\Option as O;
     use Alorel\Dropbox\Options\Options;
+    use Alorel\Dropbox\Parameters\AccessLevel;
     use Alorel\Dropbox\Parameters\SearchMode as SM;
     use Alorel\Dropbox\Parameters\ThumbnailFormat as TF;
     use Alorel\Dropbox\Parameters\ThumbnailSize as TS;
@@ -60,6 +61,8 @@
             yield ['setSearchMode', O::MODE, SM::filenameAndContent()];
             yield ['setMaxResults', O::MAX_RESULTS, 10];
             yield ['setStart', O::START, 5];
+            yield ['setCustomMessage', O::CUSTOM_MESSAGE, __CLASS__];
+            yield ['setAccessLevel', O::ACCESS_LEVEL, AccessLevel::VIEWER_NO_COMMENT];
 
             // Do booleans
             foreach ([
@@ -69,7 +72,9 @@
                          ['setIncludeDeleted', O::INCLUDE_DELETED],
                          ['setIncludeHasExplicitSharedMembers', O::INCLUDE_HAS_EXPLICIT_SHARED_MEMBERS],
                          ['setIncludeMediaInfo', O::INCLUDE_MEDIA_INFO],
-                         ['setRecursive', O::RECURSIVE]
+                         ['setRecursive', O::RECURSIVE],
+                         ['setAddMessageAsComment', O::ADD_MESSAGE_AS_COMMENT],
+                         ['setQuiet', O::QUIET]
                      ] as $v) {
                 $v[2] = true;
                 yield $v;

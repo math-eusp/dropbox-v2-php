@@ -21,6 +21,34 @@
         const COPY_REFERENCE = 'copy_reference';
 
         /**
+         * Item access level
+         *
+         * @var string
+         */
+        const ACCESS_LEVEL = 'access_level';
+
+        /**
+         * The custom message option
+         *
+         * @var string
+         */
+        const CUSTOM_MESSAGE = 'custom_message';
+
+        /**
+         * Quiet option
+         *
+         * @var string
+         */
+        const QUIET = 'quiet';
+
+        /**
+         * AddMessageAsComment option
+         *
+         * @var string
+         */
+        const ADD_MESSAGE_AS_COMMENT = 'add_message_as_comment';
+
+        /**
          * Account ID
          *
          * @var string

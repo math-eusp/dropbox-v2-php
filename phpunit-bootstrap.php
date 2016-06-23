@@ -9,15 +9,19 @@
     use AloFramework\Common\Alo;
     use Alorel\Dropbox\Operation\AbstractOperation;
     use Alorel\Dropbox\Operation\Files\Delete;
+    use Alorel\Dropbox\Options\Mixins\AccessLevelTrait;
+    use Alorel\Dropbox\Options\Mixins\AddMessageAsCommentTrait;
     use Alorel\Dropbox\Options\Mixins\AutoRenameTrait;
     use Alorel\Dropbox\Options\Mixins\ClientModifiedTrait;
     use Alorel\Dropbox\Options\Mixins\CloseTrait;
+    use Alorel\Dropbox\Options\Mixins\CustomMessageTrait;
     use Alorel\Dropbox\Options\Mixins\IncludeDeletedTrait;
     use Alorel\Dropbox\Options\Mixins\IncludeHasExplicitSharedMembersTrait;
     use Alorel\Dropbox\Options\Mixins\IncludeMediaInfoTrait;
     use Alorel\Dropbox\Options\Mixins\LimitTrait;
     use Alorel\Dropbox\Options\Mixins\MaxResultsTrait;
     use Alorel\Dropbox\Options\Mixins\MuteTrait;
+    use Alorel\Dropbox\Options\Mixins\QuietTrait;
     use Alorel\Dropbox\Options\Mixins\RecursiveTrait;
     use Alorel\Dropbox\Options\Mixins\SearchModeTrait;
     use Alorel\Dropbox\Options\Mixins\StartTrait;
@@ -268,6 +272,10 @@
         use MaxResultsTrait;
         use SearchModeTrait;
         use StartTrait;
+        use CustomMessageTrait;
+        use AddMessageAsCommentTrait;
+        use QuietTrait;
+        use AccessLevelTrait;
     }
 
     if (class_exists('\PHPUnit_Framework_TestCase')) {
