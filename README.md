@@ -1,7 +1,6 @@
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/alorel/dropbox-v2-php.svg)](http://isitmaintained.com/project/alorel/dropbox-v2-php "Average time to resolve an issue")
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/alorel/dropbox-v2-php.svg)](http://isitmaintained.com/project/alorel/dropbox-v2-php "Percentage of issues still open")
 [![Build Status](https://travis-ci.org/Alorel/dropbox-v2-php.svg?branch=master)](https://travis-ci.org/Alorel/dropbox-v2-php)
-[![codecov](https://codecov.io/gh/Alorel/dropbox-v2-php/branch/master/graph/badge.svg)](https://codecov.io/gh/Alorel/dropbox-v2-php)
 [![Dependency Status](https://www.versioneye.com/user/projects/5756bd6b7757a0004a1de150/badge.svg)](https://www.versioneye.com/user/projects/5756bd6b7757a0004a1de150)
 [![Reference Status](https://www.versioneye.com/php/alorel:dropbox-v2-php/reference_badge.svg)](https://www.versioneye.com/php/alorel:dropbox-v2-php/references)
 [![HHVM Status](http://hhvm.h4cc.de/badge/alorel/dropbox-v2-php.svg)](http://hhvm.h4cc.de/package/alorel/dropbox-v2-php)
