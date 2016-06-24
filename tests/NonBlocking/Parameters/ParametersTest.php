@@ -64,6 +64,17 @@
             yield [MemberPolicy::TEAM];
         }
 
+        /** @dataProvider pACLUpdatePolicy */
+        function testACLUpdatePolicy($p) {
+            $e = ['.tag' => $p];
+            $this->factoryAbstraction(ACLUpdatePolicy::class, $p, [], $e);
+        }
+
+        function pACLUpdatePolicy() {
+            yield [ACLUpdatePolicy::EDITORS];
+            yield [ACLUpdatePolicy::OWNER];
+        }
+
         /** @dataProvider thumbnailFormat */
         function testThumbnailFormat($format) {
             $expect = [

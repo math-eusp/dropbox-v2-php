@@ -9,29 +9,28 @@
     use Alorel\Dropbox\Options\Option;
 
     /**
-     * Who can be a member of this shared folder. Only applicable if the current user is on a team. The default for
-     * this union is anyone.
+     * Who can add and remove members of this shared folder. The default for this union is owner.
      *
      * @author Art <a.molcanovas@gmail.com>
      */
-    class MemberPolicy extends AbstractParameter {
+    class ACLUpdatePolicy extends AbstractParameter {
 
         /**
-         * Only a teammate can become a member.
+         * Only the owner can update the ACL.
          *
          * @var string
          */
-        const TEAM = 'team';
+        const OWNER = 'owner';
 
         /**
-         * Anyone can become a member.
+         * Any editor can update the ACL. This may be further restricted to editors on the same team.
          *
          * @var string
          */
-        const ANYONE = 'anyone';
+        const EDITORS = 'editors';
 
         /**
-         * MemberPolicy constructor.
+         * ACLUpdatePolicy constructor.
          *
          * @author Art <a.molcanovas@gmail.com>
          *
@@ -42,22 +41,22 @@
         }
 
         /**
-         * Only a teammate can become a member.
+         * Only the owner can update the ACL.
          *
          * @author Art <a.molcanovas@gmail.com>
          * @return self
          */
-        static function team() {
-            return new self(self::TEAM);
+        static function owner() {
+            return new self(self::OWNER);
         }
 
         /**
-         * Anyone can become a member.
+         * Any editor can update the ACL. This may be further restricted to editors on the same team.
          *
          * @author Art <a.molcanovas@gmail.com>
          * @return self
          */
-        static function anyone() {
-            return new self(self::ANYONE);
+        static function editors() {
+            return new self(self::EDITORS);
         }
     }
