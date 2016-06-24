@@ -11,34 +11,39 @@
      *
      * @author Art <a.molcanovas@gmail.com>
      */
-    class AccessLevel {
+    class AccessLevel extends AbstractTagParameter {
 
         /**
          * The collaborator is the owner of the shared folder. Owners can view and edit the shared folder as well as
          * set the folder's policies using update_folder_policy.
          *
-         * @var string
+         * @author Art <a.molcanovas@gmail.com>
+         * @return self
          */
-        const OWNER = 'owner';
+        static function owner() {
+            return new self(__FUNCTION__);
+        }
 
         /**
          * The collaborator can both view and edit the shared folder.
          *
-         * @var string
+         * @author Art <a.molcanovas@gmail.com>
+         * @return self
          */
-        const EDITOR = 'editor';
+        static function editor() {
+            return new self(__FUNCTION__);
+        }
 
         /**
          * The collaborator can only view the shared folder.
          *
-         * @var string
-         */
-        const VIEWER = 'viewer';
-
-        /**
-         * The collaborator can only view the shared folder and does not have any access to comments.
+         * @author Art <a.molcanovas@gmail.com>
          *
-         * @var string
+         * @param bool $canAccessComments If set to false, the viewer will not have any access to comments.
+         *
+         * @return self
          */
-        const VIEWER_NO_COMMENT = 'viewer_no_comment';
+        static function viewer($canAccessComments = true) {
+            return new self($canAccessComments ? __FUNCTION__ : 'viewer_no_comment');
+        }
     }

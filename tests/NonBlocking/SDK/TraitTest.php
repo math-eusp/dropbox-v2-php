@@ -62,7 +62,10 @@
             yield ['setMaxResults', O::MAX_RESULTS, 10];
             yield ['setStart', O::START, 5];
             yield ['setCustomMessage', O::CUSTOM_MESSAGE, __CLASS__];
-            yield ['setAccessLevel', O::ACCESS_LEVEL, AccessLevel::VIEWER_NO_COMMENT];
+            yield ['setAccessLevel', O::ACCESS_LEVEL, AccessLevel::viewer(true)];
+            yield ['setAccessLevel', O::ACCESS_LEVEL, AccessLevel::viewer(false)];
+            yield ['setAccessLevel', O::ACCESS_LEVEL, AccessLevel::owner()];
+            yield ['setAccessLevel', O::ACCESS_LEVEL, AccessLevel::editor()];
 
             // Do booleans
             foreach ([

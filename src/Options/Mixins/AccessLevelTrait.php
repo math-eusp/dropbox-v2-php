@@ -14,6 +14,7 @@
     namespace Alorel\Dropbox\Options\Mixins;
 
     use Alorel\Dropbox\Options\Option;
+    use Alorel\Dropbox\Parameters\AccessLevel;
 
     /**
      * What access level the members will have
@@ -23,15 +24,15 @@
     trait AccessLevelTrait {
 
         /**
-         * What access level the members will have. Please use one of the constants in the
-         * {@link \Alorel\Dropbox\Parameters\AccessLevel AccessLevel} class to protect against format changes and human
-         * error
+         * Set the access level the members will have.
          *
-         * @param string $level The access level
+         * @author Art <a.molcanovas@gmail.com>
+         *
+         * @param AccessLevel $level The access level
          *
          * @return self
          */
-        function setAccessLevel($level) {
+        function setAccessLevel(AccessLevel $level) {
             $this[Option::ACCESS_LEVEL] = $level;
 
             return $this;
