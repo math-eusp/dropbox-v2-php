@@ -11,7 +11,7 @@
     class ThumbnailFormatTest extends DBTestCase {
 
         function testThumbnailFormat() {
-            $expected = [ThumbnailFormat::JPEG, ThumbnailFormat::PNG];
+            $expected = ['jpeg', 'png'];
             $actual = ThumbnailFormat::availableFormats();
 
             sort($expected);

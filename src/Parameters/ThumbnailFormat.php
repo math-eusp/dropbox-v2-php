@@ -6,8 +6,6 @@
 
     namespace Alorel\Dropbox\Parameters;
 
-    use ReflectionClass;
-
     /**
      * The format for the thumbnail image, jpeg (default) or png. For images that are photos, jpeg should be
      * preferred, while png is better for screenshots and digital arts. The default for this union is jpeg.
@@ -43,6 +41,6 @@
          * @return array
          */
         static function availableFormats() {
-            return (new ReflectionClass(ThumbnailFormat::class))->getConstants();
+            return ['jpeg', 'png'];
         }
     }

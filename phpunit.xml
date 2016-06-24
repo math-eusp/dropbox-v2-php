@@ -19,11 +19,11 @@
 >
 
     <testsuites>
-        <testsuite name="BLOCKING">
-            <directory>./tests/Blocking</directory>
-        </testsuite>
         <testsuite name="NON_BLOCKING">
             <directory>./tests/NonBlocking</directory>
+        </testsuite>
+        <testsuite name="BLOCKING">
+            <directory>./tests/Blocking</directory>
         </testsuite>
     </testsuites>
 

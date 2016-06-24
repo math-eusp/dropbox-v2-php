@@ -36,8 +36,8 @@
         }
 
         function pMemberSelector() {
-            yield Sel::DROPBOX_ID => ['dropboxID', Sel::DROPBOX_ID];
-            yield Sel::EMAIL => ['email', Sel::EMAIL];
+            yield 'dropbox_id' => ['dropboxID', 'dropbox_id'];
+            yield 'email' => ['email', 'email'];
         }
 
         function testInitialDataset() {
@@ -49,8 +49,8 @@
             for ($i = 0; $i < self::I_TOP; $i++) {
                 $this->assertTrue(isset($c[$i]));
                 $this->assertEquals([
-                                        O::DOT_TAG => Sel::EMAIL,
-                                        Sel::EMAIL => __CLASS__ . $i
+                                        O::DOT_TAG => 'email',
+                                        'email'    => __CLASS__ . $i
                                     ],
                                     $c[$i]->jsonSerialize());
             }
