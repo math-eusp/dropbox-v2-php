@@ -9,13 +9,15 @@
     use AloFramework\Common\Alo;
     use Alorel\Dropbox\Util;
     use ArrayAccess;
+    use JsonSerializable;
+    use Serializable;
 
     /**
      * Abstract options wrapper
      *
      * @author Art <a.molcanovas@gmail.com>
      */
-    class Options implements ArrayAccess {
+    class Options implements ArrayAccess, JsonSerializable, Serializable {
 
         /**
          * A Dropbox-friendly timestamp wrapper
@@ -40,6 +42,42 @@
          */
         function __construct(array $defaults = []) {
             $this->options = Util::trimNulls($defaults);
+        }
+
+        /**
+         * Returns the thing that'll be json_encode()'d
+         *
+         * @author Art <a.molcanovas@gmail.com>
+         * @return array
+         */
+        function jsonSerialize() {
+            return $this->options;
+        }
+
+        /**
+         * String representation of object
+         *
+         * @link  http://php.net/manual/en/serializable.serialize.php
+         * @return string the string representation of the object or null
+         * @since 5.1.0
+         */
+        public function serialize() {
+            return json_encode($this);
+        }
+
+        /**
+         * Constructs the object
+         *
+         * @author Art <a.molcanovas@gmail.com>
+         *
+         * @link   http://php.net/manual/en/serializable.unserialize.php
+         *
+         * @param string $serialized The string representation of the object.
+         *
+         * @return void
+         */
+        public function unserialize($serialized) {
+            $this->options = json_decode($serialized, true);
         }
 
         /**
