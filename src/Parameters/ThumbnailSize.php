@@ -6,7 +6,6 @@
 
     namespace Alorel\Dropbox\Parameters;
 
-    use Alorel\Dropbox\Options\Option;
     use ReflectionClass;
 
     /**
@@ -14,7 +13,7 @@
      *
      * @author Art <a.molcanovas@gmail.com>
      */
-    class ThumbnailSize extends AbstractParameter {
+    class ThumbnailSize extends AbstractTagParameter {
 
         /**
          * ThumbnailSize constructor.
@@ -25,7 +24,7 @@
          * @param int $height Thumbnail height
          */
         function __construct($width, $height) {
-            parent::__construct([Option::DOT_TAG => 'w' . $width . 'h' . $height]);
+            parent::__construct('w' . $width . 'h' . $height);
         }
 
         /**
@@ -86,7 +85,7 @@
          */
         static function availableSizes() {
             $r = [];
-            foreach ((new ReflectionClass(ThumbnailSize::class))->getMethods() as $m) {
+            foreach ((new ReflectionClass(self::class))->getMethods() as $m) {
                 if (preg_match('~^w[0-9]+h[0-9]+$~', $m->getName())) {
                     $r[] = $m->getName();
                 }

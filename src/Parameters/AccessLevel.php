@@ -11,7 +11,7 @@
      *
      * @author Art <a.molcanovas@gmail.com>
      */
-    class AccessLevel extends AbstractParameter {
+    class AccessLevel {
 
         /**
          * The collaborator is the owner of the shared folder. Owners can view and edit the shared folder as well as

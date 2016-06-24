@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="robots" content="index, follow, all"/>
-    <title>Alorel\Dropbox\Parameters\MemberSelector | Dropbox v2 PHP SDK</title>
+    <title>Alorel\Dropbox\Parameters\SharedLinkPolicy | Dropbox v2 PHP SDK</title>
 
     <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
@@ -19,7 +19,7 @@
 
 </head>
 
-<body id="class" data-name="class:Alorel_Dropbox_Parameters_MemberSelector" data-root-path="../../../">
+<body id="class" data-name="class:Alorel_Dropbox_Parameters_SharedLinkPolicy" data-root-path="../../../">
 <div id="content">
     <div id="left-column">
         <div id="control-panel">
@@ -34,7 +34,7 @@
 
         <div id="api-tree"></div>
 
-        </div>
+    </div>
     <div id="right-column">
         <nav id="site-nav" class="navbar navbar-default" role="navigation">
             <div class="container-fluid">
@@ -46,7 +46,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="../../../index.html">Dropbox v2 PHP SDK</a>
-            </div>
+                </div>
                 <div class="collapse navbar-collapse" id="navbar-elements">
                     <ul class="nav navbar-nav">
                         <li><a href="../../../classes.html">Classes</a></li>
@@ -67,25 +67,43 @@
                 <li><a href="../../../Alorel/Dropbox.html">Dropbox</a></li>
                 <li><a href="../../../Alorel/Dropbox/Parameters.html">Parameters</a></li>
 
-                <li>MemberSelector</li>
+                <li>SharedLinkPolicy</li>
             </ol>
         </div>
         <div id="page-content">
 
             <div class="page-header">
-                <h1>MemberSelector</h1>
+                <h1>SharedLinkPolicy</h1>
             </div>
 
             <p> class
-                <strong>MemberSelector</strong> extends <a
+                <strong>SharedLinkPolicy</strong> extends <a
                         href="../../../Alorel/Dropbox/Parameters/AbstractParameter.html"><abbr
                         title="Alorel\Dropbox\Parameters\AbstractParameter">AbstractParameter</abbr></a>
             </p>
 
             <div class="description">
-                <p>Includes different ways to identify a member of a shared item. The value will be one of the following
-                    datatypes. New
-                    values may be introduced as the Dropbox API evolves.</p></div>
+                <p>Policy governing who can view shared links.</p></div>
+
+
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                <tr>
+                    <td>ANYONE</td>
+                    <td class="last">
+                        <p><em>Links can be shared with anyone.</em></p>
+                        <p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MEMBERS</td>
+                    <td class="last">
+                        <p><em>Links can only be shared among members of the shared folder.</em></p>
+                        <p></p>
+                    </td>
+                </tr>
+            </table>
 
 
             <h2>Methods</h2>
@@ -95,7 +113,7 @@
                     <div class="col-md-2 type">
 
                         array
-                </div>
+                    </div>
                     <div class="col-md-8 type">
                         <a href="#method_jsonSerialize">jsonSerialize</a>()
                         <p>Specify data which should be serialized to JSON</p></div>
@@ -109,7 +127,7 @@
                     <div class="col-md-2 type">
 
                         string
-                </div>
+                    </div>
                     <div class="col-md-8 type">
                         <a href="#method___toString">__toString</a>()
                         <p>A shorthand for JSON-encoding parameters</p></div>
@@ -119,30 +137,6 @@
                                 title="Alorel\Dropbox\Parameters\AbstractParameter">AbstractParameter</abbr></a></small>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-2 type">
-                        static&nbsp;
-                        <a href="../../../Alorel/Dropbox/Parameters/MemberSelector.html"><abbr
-                                title="Alorel\Dropbox\Parameters\MemberSelector">MemberSelector</abbr></a>
-                </div>
-                    <div class="col-md-8 type">
-                        <a href="#method_dropboxID">dropboxID</a>(
-                        string $id)
-                        <p>Constructs a member selector from a Dropbox ID</p></div>
-                    <div class="col-md-2"></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2 type">
-                        static&nbsp;
-                        <a href="../../../Alorel/Dropbox/Parameters/MemberSelector.html"><abbr
-                                title="Alorel\Dropbox\Parameters\MemberSelector">MemberSelector</abbr></a>
-                </div>
-                    <div class="col-md-8 type">
-                        <a href="#method_email">email</a>(
-                        string $email)
-                        <p>Constructs a member selector from their email</p></div>
-                    <div class="col-md-2"></div>
-            </div>
             </div>
 
 
@@ -189,7 +183,7 @@
                                 </tr>
                             </table>
 
-                    </div>
+                        </div>
                     </div>
 
                 </div>
@@ -225,92 +219,6 @@
                     </div>
 
                 </div>
-                <div class="method-item">
-                    <h3 id="method_dropboxID">
-                        <div class="location">at line line 43</div>
-                        <code> static
-                            <a href="../../../Alorel/Dropbox/Parameters/MemberSelector.html"><abbr
-                                    title="Alorel\Dropbox\Parameters\MemberSelector">MemberSelector</abbr></a>
-                            <strong>dropboxID</strong>(
-                            string $id)</code>
-                    </h3>
-                    <div class="details">
-                        <div class="method-description">
-                            <p>Constructs a member selector from a Dropbox ID</p></div>
-                        <div class="tags">
-                            <h4>Parameters</h4>
-
-                            <table class="table table-condensed">
-                                <tr>
-                                    <td>
-                                        string
-                                    </td>
-                                    <td>$id</td>
-                                    <td>Dropbox account, team member, or group ID of member.</td>
-                                </tr>
-                            </table>
-
-
-                            <h4>Return Value</h4>
-
-                            <table class="table table-condensed">
-                                <tr>
-                                    <td>
-                                        <a href="../../../Alorel/Dropbox/Parameters/MemberSelector.html"><abbr
-                                                title="Alorel\Dropbox\Parameters\MemberSelector">MemberSelector</abbr></a>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                            </table>
-
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="method-item">
-                    <h3 id="method_email">
-                        <div class="location">at line line 56</div>
-                        <code> static
-                            <a href="../../../Alorel/Dropbox/Parameters/MemberSelector.html"><abbr
-                                    title="Alorel\Dropbox\Parameters\MemberSelector">MemberSelector</abbr></a>
-                            <strong>email</strong>(
-                            string $email)</code>
-                    </h3>
-                    <div class="details">
-                        <div class="method-description">
-                            <p>Constructs a member selector from their email</p></div>
-                        <div class="tags">
-                            <h4>Parameters</h4>
-
-                            <table class="table table-condensed">
-                                <tr>
-                                    <td>
-                                        string
-                                    </td>
-                                    <td>$email</td>
-                                    <td>Email address of member.</td>
-                                </tr>
-                            </table>
-
-
-                            <h4>Return Value</h4>
-
-                            <table class="table table-condensed">
-                                <tr>
-                                    <td>
-                                        <a href="../../../Alorel/Dropbox/Parameters/MemberSelector.html"><abbr
-                                                title="Alorel\Dropbox\Parameters\MemberSelector">MemberSelector</abbr></a>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                            </table>
-
-
-                        </div>
-                    </div>
-
-            </div>
             </div>
 
 
@@ -319,8 +227,8 @@
             Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
         </div>
 
-        </div>
     </div>
+</div>
 </body>
 
 </html>

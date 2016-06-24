@@ -60,8 +60,8 @@
         }
 
         function pMemberPolicy() {
-            yield [MemberPolicy::ANYONE];
-            yield [MemberPolicy::TEAM];
+            yield ['team'];
+            yield ['anyone'];
         }
 
         /** @dataProvider pACLUpdatePolicy */
@@ -71,8 +71,8 @@
         }
 
         function pACLUpdatePolicy() {
-            yield [ACLUpdatePolicy::EDITORS];
-            yield [ACLUpdatePolicy::OWNER];
+            yield ['editors'];
+            yield ['owner'];
         }
 
         /** @dataProvider thumbnailFormat */
@@ -116,9 +116,9 @@
         }
 
         function writeMode() {
-            yield WriteMode::TAG_ADD => [WriteMode::TAG_ADD];
-            yield WriteMode::TAG_OVERWRITE => [WriteMode::TAG_OVERWRITE];
-            yield WriteMode::TAG_UPDATE => [WriteMode::TAG_UPDATE, __CLASS__];
+            yield 'add' => ['add'];
+            yield 'overwrite' => ['overwrite'];
+            yield 'update' => ['update', __CLASS__];
         }
 
         /** @dataProvider searchMode */
@@ -133,9 +133,9 @@
         }
 
         function searchMode() {
-            yield 'filename' => ['filename', SearchMode::TAG_FILENAME];
-            yield 'filenameAndContent' => ['filenameAndContent', SearchMode::TAG_FILENAME_AND_CONTENT];
-            yield 'deletedFilename' => ['deletedFilename', SearchMode::DELETED_FILENAME];
+            yield 'filename' => ['filename', 'filename'];
+            yield 'filenameAndContent' => ['filenameAndContent', 'filename_and_content'];
+            yield 'deletedFilename' => ['deletedFilename', 'deleted_filename'];
         }
 
         /** @dataProvider uploadSessionCursor */

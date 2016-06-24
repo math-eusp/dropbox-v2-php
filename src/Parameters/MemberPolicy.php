@@ -6,40 +6,12 @@
 
     namespace Alorel\Dropbox\Parameters;
 
-    use Alorel\Dropbox\Options\Option;
-
     /**
-     * Who can be a member of this shared folder. Only applicable if the current user is on a team. The default for
-     * this union is anyone.
+     * Policy governing who can be a member of a shared folder. Only applicable to folders owned by a user on a team.
      *
      * @author Art <a.molcanovas@gmail.com>
      */
-    class MemberPolicy extends AbstractParameter {
-
-        /**
-         * Only a teammate can become a member.
-         *
-         * @var string
-         */
-        const TEAM = 'team';
-
-        /**
-         * Anyone can become a member.
-         *
-         * @var string
-         */
-        const ANYONE = 'anyone';
-
-        /**
-         * MemberPolicy constructor.
-         *
-         * @author Art <a.molcanovas@gmail.com>
-         *
-         * @param string $policy The policy to apply
-         */
-        protected function __construct($policy) {
-            parent::__construct([Option::DOT_TAG => $policy]);
-        }
+    class MemberPolicy extends AbstractTagParameter {
 
         /**
          * Only a teammate can become a member.
@@ -48,7 +20,7 @@
          * @return self
          */
         static function team() {
-            return new self(self::TEAM);
+            return new self(__FUNCTION__);
         }
 
         /**
@@ -58,6 +30,6 @@
          * @return self
          */
         static function anyone() {
-            return new self(self::ANYONE);
+            return new self(__FUNCTION__);
         }
     }

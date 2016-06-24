@@ -6,7 +6,6 @@
 
     namespace Alorel\Dropbox\Parameters;
 
-    use Alorel\Dropbox\Options\Option as O;
     use ReflectionClass;
 
     /**
@@ -15,32 +14,7 @@
      *
      * @author Art <a.molcanovas@gmail.com>
      */
-    class ThumbnailFormat extends AbstractParameter {
-
-        /**
-         * Dot jpg
-         *
-         * @var string
-         */
-        const JPEG = 'jpeg';
-
-        /**
-         * dot png
-         *
-         * @var string
-         */
-        const PNG = 'png';
-
-        /**
-         * ImageFormat constructor.
-         *
-         * @author Art <a.molcanovas@gmail.com>
-         *
-         * @param string $format Image format
-         */
-        protected function __construct($format) {
-            parent::__construct([O::DOT_TAG => $format]);
-        }
+    class ThumbnailFormat extends AbstractTagParameter {
 
         /**
          * Set the image format to JPEG
@@ -49,7 +23,7 @@
          * @return self
          */
         static function jpeg() {
-            return new self(static::JPEG);
+            return new self(__FUNCTION__);
         }
 
         /**
@@ -59,7 +33,7 @@
          * @return self
          */
         static function png() {
-            return new self(static::PNG);
+            return new self(__FUNCTION__);
         }
 
         /**

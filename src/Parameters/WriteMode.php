@@ -28,27 +28,6 @@
     class WriteMode extends AbstractParameter {
 
         /**
-         * Used by {@link WriteMode::add()}
-         *
-         * @var string
-         */
-        const TAG_ADD = 'add';
-
-        /**
-         * Used by {@link WriteMode::overwrite()}
-         *
-         * @var string
-         */
-        const TAG_OVERWRITE = 'overwrite';
-
-        /**
-         * Used by {@link WriteMode::update()}
-         *
-         * @var string
-         */
-        const TAG_UPDATE = 'update';
-
-        /**
          * WriteMode constructor.
          *
          * @author Art <a.molcanovas@gmail.com>
@@ -72,7 +51,7 @@
          * @return self
          */
         static function add() {
-            return new self(static::TAG_ADD);
+            return new self('add');
         }
 
         /**
@@ -82,7 +61,7 @@
          * @return self
          */
         static function overwrite() {
-            return new self(static::TAG_OVERWRITE);
+            return new self('overwrite');
         }
 
         /**
@@ -97,6 +76,6 @@
          * @return self
          */
         static function update($rev) {
-            return new self(static::TAG_UPDATE, $rev);
+            return new self('update', $rev);
         }
     }

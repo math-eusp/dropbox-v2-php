@@ -17,20 +17,6 @@
     class MemberSelector extends AbstractParameter {
 
         /**
-         * The Dropbox ID tag
-         *
-         * @var string
-         */
-        const DROPBOX_ID = 'dropbox_id';
-
-        /**
-         * The email tag
-         *
-         * @var string
-         */
-        const EMAIL = 'email';
-
-        /**
          * MemberSelector constructor.
          *
          * @author Art <a.molcanovas@gmail.com>
@@ -55,7 +41,7 @@
          * @return self
          */
         static function dropboxID($id) {
-            return new self(self::DROPBOX_ID, $id);
+            return new self('dropbox_id', $id);
         }
 
         /**
@@ -68,6 +54,6 @@
          * @return self
          */
         static function email($email) {
-            return new self(self::EMAIL, $email);
+            return new self(__FUNCTION__, $email);
         }
     }
