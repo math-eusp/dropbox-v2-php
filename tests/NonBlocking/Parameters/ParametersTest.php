@@ -53,6 +53,17 @@
             $this->assertEquals(1, count($abs->jsonSerialize()));
         }
 
+        /** @dataProvider pMemberPolicy */
+        function testMemberPolicy($p) {
+            $e = ['.tag' => $p];
+            $this->factoryAbstraction(MemberPolicy::class, $p, [], $e);
+        }
+
+        function pMemberPolicy() {
+            yield [MemberPolicy::ANYONE];
+            yield [MemberPolicy::TEAM];
+        }
+
         /** @dataProvider thumbnailFormat */
         function testThumbnailFormat($format) {
             $expect = [
