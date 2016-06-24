@@ -75,6 +75,19 @@
             yield ['owner'];
         }
 
+        /** @dataProvider pSharedLinkPolicy */
+        function testSharedLinkPolicy($p) {
+            $expect = [
+                '.tag' => $p
+            ];
+            $this->factoryAbstraction(SharedLinkPolicy::class, $p, [], $expect);
+        }
+
+        function pSharedLinkPolicy() {
+            yield ['anyone'];
+            yield ['members'];
+        }
+
         /** @dataProvider thumbnailFormat */
         function testThumbnailFormat($format) {
             $expect = [
