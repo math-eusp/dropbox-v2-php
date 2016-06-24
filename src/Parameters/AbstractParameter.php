@@ -8,13 +8,14 @@
 
     use Alorel\Dropbox\Util;
     use JsonSerializable;
+    use Serializable;
 
     /**
      * Topmost abstract parameter class
      *
      * @author Art <a.molcanovas@gmail.com>
      */
-    abstract class AbstractParameter implements JsonSerializable {
+    abstract class AbstractParameter implements JsonSerializable, Serializable {
 
         /**
          * Parameter arguments
@@ -80,6 +81,33 @@
          */
         function jsonSerialize() {
             return $this->args;
+        }
+
+        /**
+         * String representation of object
+         *
+         * @author Art <a.molcanovas@gmail.com>
+         *
+         * @link   http://php.net/manual/en/serializable.serialize.php
+         * @return string the string representation of the object or null
+         */
+        public function serialize() {
+            return json_encode($this);
+        }
+
+        /**
+         * Constructs the object
+         *
+         * @author Art <a.molcanovas@gmail.com>
+         *
+         * @link   http://php.net/manual/en/serializable.unserialize.php
+         *
+         * @param string $serialized The string representation of the object.
+         *
+         * @return void
+         */
+        public function unserialize($serialized) {
+            $this->args = json_decode($serialized, true);
         }
 
         /**
