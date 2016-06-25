@@ -9,23 +9,23 @@
     use Alorel\Dropbox\Options\Option;
 
     /**
-     * Whether added members should be notified via device notifications of their invitation. The default for this
-     * field is False.
+     * Whether to force the operation to happen asynchronously. The default for this field is False.
      *
      * @author Art <a.molcanovas@gmail.com>
      */
-    trait QuietTrait {
+    trait ForceAsyncTrait {
 
         /**
-         * Whether added members should be notified via device notifications of their invitation. The default for
-         * this field is False.
+         * Whether to force the operation to happen asynchronously. The default for this field is False.
          *
-         * @param bool $set The setting
+         * @author Art <a.molcanovas@gmail.com>
+         *
+         * @param bool $async The setting
          *
          * @return self
          */
-        function setQuiet($set) {
-            $this[Option::QUIET] = (bool)$set;
+        function setForceAsync($async) {
+            $this[Option::FORCE_ASYNC] = (bool)$async;
 
             return $this;
         }

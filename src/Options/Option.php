@@ -21,6 +21,27 @@
         const COPY_REFERENCE = 'copy_reference';
 
         /**
+         * The ACL update policy
+         *
+         * @var string
+         */
+        const ACL_UPDATE_POLICY = 'acl_update_policy';
+
+        /**
+         * The shared link policy
+         *
+         * @var string
+         */
+        const SHARED_LINK_POLICY = 'shared_link_policy';
+
+        /**
+         * The member policy
+         *
+         * @var string
+         */
+        const MEMBER_POLICY = 'member_policy';
+
+        /**
          * Item access level
          *
          * @var string
@@ -89,6 +110,13 @@
          * @var string
          */
         const QUERY = 'query';
+
+        /**
+         * Force asynchronous operation
+         *
+         * @var string
+         */
+        const FORCE_ASYNC = 'force_async';
 
         /**
          * Max # of results

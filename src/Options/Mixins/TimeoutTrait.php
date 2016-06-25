@@ -4,13 +4,6 @@
      * Licenced under MIT: https://github.com/Alorel/dropbox-v2-php/blob/master/LICENSE
      */
 
-    /**
-     * Created by PhpStorm.
-     * User: Art
-     * Date: 03/06/2016
-     * Time: 23:26
-     */
-
     namespace Alorel\Dropbox\Options\Mixins;
 
     use Alorel\Dropbox\Options\Option;

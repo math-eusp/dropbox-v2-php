@@ -10,7 +10,10 @@
     use Alorel\Dropbox\Options\Option as O;
     use Alorel\Dropbox\Options\Options;
     use Alorel\Dropbox\Parameters\AccessLevel;
+    use Alorel\Dropbox\Parameters\ACLUpdatePolicy;
+    use Alorel\Dropbox\Parameters\MemberPolicy;
     use Alorel\Dropbox\Parameters\SearchMode as SM;
+    use Alorel\Dropbox\Parameters\SharedLinkPolicy;
     use Alorel\Dropbox\Parameters\ThumbnailFormat as TF;
     use Alorel\Dropbox\Parameters\ThumbnailSize as TS;
     use Alorel\Dropbox\Parameters\WriteMode as WM;
@@ -66,6 +69,12 @@
             yield ['setAccessLevel', O::ACCESS_LEVEL, AccessLevel::viewer(false)];
             yield ['setAccessLevel', O::ACCESS_LEVEL, AccessLevel::owner()];
             yield ['setAccessLevel', O::ACCESS_LEVEL, AccessLevel::editor()];
+            yield ['setACLUpdatePolicy', O::ACL_UPDATE_POLICY, ACLUpdatePolicy::editors()];
+            yield ['setACLUpdatePolicy', O::ACL_UPDATE_POLICY, ACLUpdatePolicy::owner()];
+            yield ['setMemberPolicy', O::MEMBER_POLICY, MemberPolicy::anyone()];
+            yield ['setMemberPolicy', O::MEMBER_POLICY, MemberPolicy::team()];
+            yield ['setSharedLinkPolicy', O::SHARED_LINK_POLICY, SharedLinkPolicy::anyone()];
+            yield ['setSharedLinkPolicy', O::SHARED_LINK_POLICY, SharedLinkPolicy::members()];
 
             // Do booleans
             foreach ([
@@ -77,7 +86,8 @@
                          ['setIncludeMediaInfo', O::INCLUDE_MEDIA_INFO],
                          ['setRecursive', O::RECURSIVE],
                          ['setAddMessageAsComment', O::ADD_MESSAGE_AS_COMMENT],
-                         ['setQuiet', O::QUIET]
+                         ['setQuiet', O::QUIET],
+                         ['setForceAsync', O::FORCE_ASYNC]
                      ] as $v) {
                 $v[2] = true;
                 yield $v;

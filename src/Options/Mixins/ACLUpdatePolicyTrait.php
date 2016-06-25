@@ -7,26 +7,26 @@
     namespace Alorel\Dropbox\Options\Mixins;
 
     use Alorel\Dropbox\Options\Option;
-    use Alorel\Dropbox\Parameters\AccessLevel;
+    use Alorel\Dropbox\Parameters\ACLUpdatePolicy;
 
     /**
-     * What access level the members will have
+     * Who can add and remove members of this shared folder. The default for this union is owner.
      *
      * @author Art <a.molcanovas@gmail.com>
      */
-    trait AccessLevelTrait {
+    trait ACLUpdatePolicyTrait {
 
         /**
-         * Set the access level the members will have.
+         * Who can add and remove members of this shared folder. The default for this union is owner.
          *
          * @author Art <a.molcanovas@gmail.com>
          *
-         * @param AccessLevel $level The access level
+         * @param ACLUpdatePolicy $policy The policy
          *
          * @return self
          */
-        function setAccessLevel(AccessLevel $level) {
-            $this[Option::ACCESS_LEVEL] = $level;
+        function setACLUpdatePolicy(ACLUpdatePolicy $policy) {
+            $this[Option::ACL_UPDATE_POLICY] = $policy;
 
             return $this;
         }
